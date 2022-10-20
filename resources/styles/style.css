@@ -56,16 +56,30 @@ header{
      display: flex;
      position: relative;
      justify-content: space-between;
-     padding: 20px;
      background-color: #000000;
      border-bottom: 1px solid var(--secundario);
+     height: 70px;
+}
+
+.show{
+    border-bottom: 1px solid white;
+}
+
+.navbar-nav{
+    height: 100%;
+}
+.navbar-collapse{
+    background-color: black;
 }
 
 .linkNavbar{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin: 0px 20px;
     font-size: large;
+
 }
 
 .linkNavbar:hover{
@@ -94,6 +108,7 @@ header{
     height: 2px;
     transform: scaleX(0);
     padding-top: 5px;
+    margin-top: 3px;
     background-color: var(--secundario);
     bottom: 0;
     left: 0;
@@ -120,6 +135,8 @@ header{
 .numeroNav{
     display: inline-block;
     color: var(--secundario);
+    margin-bottom: 0;
+    padding-right: 8px;
 }
 
 
@@ -130,16 +147,17 @@ header{
 #hero{
     height: 100vh;
     width: 100vw;
-    padding: 5% 5% 10% 5%;
-    margin-top: 20px;
+    margin-top: 70px;
     z-index: -10;
     overflow: hidden;
     
 }
 .contenedor-hero{
     width: fit-content;
+    min-width: 90vw;
     overflow: hidden;
-    height: 60vh;
+    min-height: 60vh;
+    height: fit-content;
     border: 1px solid white;
     border-radius: 4px;
 }
@@ -161,16 +179,24 @@ header{
 }
 
 #botonContacto{
-    width: fit-content;
-    height: fit-content;
-    border: 3px solid var(--clickable);
-    background-color: transparent;
-    box-shadow: 3px 5px 3px -2px var(--textoSecundario); 
-    transition: all 0.3s ease-out;
-    margin: 10px 0px;
-    white-space:nowrap;
-    padding: 0 2vw;
-    font-size: 3vw;
+    width: 230px;
+    height: 60px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    white-space: nowrap;
+    border: none;
 }
 #botonContacto:hover{
     color: var(--secundario);
@@ -179,9 +205,40 @@ header{
     box-shadow: none; 
 }
 
-#botonContacto:hover a{
-    color: var(--secundario);
+#botonContacto a{
+    font-size: large;
+    font-weight: bold;
 }
+
+#botonContacto:hover a{
+    color: white;
+}
+
+#botonContacto:after {
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  #botonContacto:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  #botonContacto:active {
+    top: 2px;
+  }
 
 /*--------------------------------------------------------------
 # Proyectos
@@ -200,6 +257,13 @@ header{
 
 }
 
+.contenedor-datos-proyecto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .datos-proyecto{
     height: fit-content;
     text-align: center;
@@ -216,7 +280,7 @@ header{
     text-align: center;
 
 }
-.datos-proyecto p{
+.descripcion-proyecto{
     color: var(--textoSecundario);
 }
 
@@ -225,7 +289,7 @@ header{
     font-size: 2vw;
     margin: 30px 0px;
 }
-.custom-btn {
+.boton-ver-proyecto {
     width: 130px;
     height: 40px;
     color: #fff;
@@ -243,12 +307,10 @@ header{
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
     white-space: nowrap;
-  }
-  .btn-16 {
     border: none;
-    color: #000;
   }
-  .btn-16:after {
+  .boton-ver-proyecto:after {
+    border-radius: 5px;
     position: absolute;
     content: "";
     width: 0;
@@ -264,21 +326,25 @@ header{
      4px 4px 5px 0px #0001;
     transition: all 0.3s ease;
   }
-  .btn-16:hover {
-    color: #000;
+  .boton-ver-proyecto:hover {
+    color: white;
   }
-  .btn-16:hover:after {
+  .boton-ver-proyecto:hover:after {
     left: auto;
     right: 0;
     width: 100%;
   }
-  .btn-16:active {
+  .boton-ver-proyecto:active {
     top: 2px;
   }
 
 .imagen-proyecto{
     border: 1px solid var(--secundario);
     box-shadow: 5px 5px 3px var(--textoSecundario);
+}
+
+.fechas-proyecto{
+    color: whitesmoke;
 }
 
 .separador-proyectos{
@@ -291,6 +357,16 @@ header{
 /*--------------------------------------------------------------
 # Proyectos Extra
 --------------------------------------------------------------*/
+.unfinished{
+
+}
+.finished{
+
+}
+.working{
+    
+}
+
 #proyectos-secundarios{
     height: fit-content;
     width: 100vw;
@@ -379,8 +455,10 @@ header{
 
 
 }
-@media (min-width:961px)  { 
-
+@media (max-width:961px)  { 
+    .contenedor-datos-proyecto{
+        padding-bottom: 10vh;
+    }
  }
 @media (min-width:1023px) {
 
