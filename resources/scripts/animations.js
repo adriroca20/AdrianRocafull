@@ -6,6 +6,40 @@ const botonNavbar = document.getElementById("botonNavbar");
 const botonNavbarAux= document.getElementById("botonNavbarAux");
 const navBar= document.getElementById("navbarPrincipal");
 const imagenPrueba= document.getElementById("prueba");
+
+const hiddenElements= document.querySelectorAll(".ocultar");
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("mostrar");
+        }
+        else{
+            entry.target.classList.remove("mostrar");
+        }
+    });
+});
+
+hiddenElements.forEach((element) =>{
+    observer.observe(element);
+});
+
+const elementosDerecha= document.querySelectorAll(".ocultar-derecha");
+const observerDerecha = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("mostrar-derecha");
+        }
+        else{
+            entry.target.classList.remove("mostrar-derecha");
+        }
+    });
+});
+
+elementosDerecha.forEach((element) =>{
+    observerDerecha.observe(element);
+});
+
+
 /***************
 / Listeners
 ****************/

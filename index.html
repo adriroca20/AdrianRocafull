@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="vendor/bootsrap/bootstrap.min.css">
   <link rel="stylesheet" href="resources/styles/style.css">
   <link rel="stylesheet" href="vendor/bootsrap/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -56,22 +57,22 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarPrincipal">
           <ul class="navbar-nav">
             <li class="nav-item mb-1 ">
-              <a class="linkNavbar" href="#proyectos">
+              <a class="linkNavbar ocultar-derecha" href="#proyectos">
                 <p class="numeroNav">1.</p> Main proyects
               </a>
             </li>
             <li class="nav-item mb-1">
-              <a class="linkNavbar" href="#proyectos-secundarios">
+              <a class="linkNavbar ocultar-derecha" href="#proyectos-secundarios">
                 <p class="numeroNav">2.</p>Small proyects
               </a>
             </li>
             <li class="nav-item mb-1">
-              <a class="linkNavbar" href="#about-me">
+              <a class="linkNavbar ocultar-derecha" href="#about-me">
                 <p class="numeroNav">3.</p> About me
               </a>
             </li>
             <li class="nav-item mb-1">
-              <a class="linkNavbar" href="#contacto">
+              <a class="linkNavbar ocultar-derecha" href="#contacto" >
                 <p class="numeroNav">4.</p>Contact
               </a>
             </li>
@@ -81,12 +82,12 @@
   </header>
 
   <section id="hero" class="d-flex justify-content-center align-items-center ">
-    <div class="row contenedor-hero">
+    <div class="row contenedor-hero" data-aos="fade-up"  data-aos-duration="2000">
       <div class="col-lg-8 d-grid align-items-center">
         <div class="hero-container ">
-          <h3>Hi, my name is</h3>
-          <h1>Adrian Rocafull</h1>
-          <p>I am a software engineer specialized in web development and portfolio's building. <br> Currently I'm
+          <h3 class="ocultar">Hi, my name is</h3>
+          <h1 class="ocultar">Adrian Rocafull</h1>
+          <p class="ocultar">I am a software engineer specialized in web development and portfolio's building. <br> Currently I'm
             focused on
             making more accesible to everyone having a tailor-made web.</p>
 
@@ -104,9 +105,7 @@
       <h1>PROYECTS</h1>
       <hr class="bg-info">
     </div>
-    <div class="carousel">
 
-    </div>
     <div id="contenedor-proyectos">
       <div class="row contenedor-proyecto mb-lg-5">
         <div class="col-lg-4 contenedor-datos-proyecto">
@@ -385,12 +384,11 @@
   <script src="resources/scripts/animations.js"></script>
   <script src="vendor/bootsrap/bootstrap.min.js"></script>
   <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

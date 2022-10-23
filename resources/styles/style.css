@@ -68,6 +68,11 @@ header{
 .navbar-nav{
     height: 100%;
 }
+
+.nav-item:nth-child(1){
+    color: red;
+}
+
 .navbar-collapse{
     background-color: black;
 }
@@ -508,6 +513,39 @@ header{
     align-items: center;
 }
 
+
+/*--------------------------------------------------------------
+# Animaciones
+--------------------------------------------------------------*/
+.ocultar{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+}
+
+.mostrar{
+    opacity: 1;
+    filter: blur(0);
+}
+
+.ocultar-derecha{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(+100%);
+}
+
+.mostrar-derecha{
+    transition: all 1.5s;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
