@@ -383,6 +383,50 @@ header{
 .contenedor-proyecto-extra{
     height: 250px;
     min-height: fit-content;
+    box-shadow: 5px 5px 10px whitesmoke;
+}
+
+/*--------------------------------------------------------------
+# About me
+--------------------------------------------------------------*/
+.bg-info{
+    width: 100vw;
+}
+#about-me{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-about{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos-about{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+.datos-about li{
+    list-style: none;
+    width: 100%;
+}
+#imagen-about{
+    width: 600px;
+    height: auto;
+    box-shadow: 10px 10px var(--principal);;
 }
 
 /*--------------------------------------------------------------
@@ -391,12 +435,17 @@ header{
 #contacto{
     padding-top: 150px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .contenedor-contacto{
     border: 1px solid white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 9px 9px 10px whitesmoke;
+    width: 80%;
 }
 .informacion{
     display: grid;
@@ -404,9 +453,10 @@ header{
 }
 .contenedor-datos{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     padding: 10%;
-    width: max-content;
+    width: 100%;
 }
 .icono-redes{
     font-size: 70px;
@@ -444,7 +494,6 @@ header{
     display: grid;
     place-content: center;
     grid-auto-columns: 100%;
-    padding: 5% 5% 10% 5%;
 }
 
 /*--------------------------------------------------------------
@@ -478,6 +527,12 @@ header{
 @media (max-width:961px)  { 
     .contenedor-datos-proyecto{
         padding-bottom: 10vh;
+    }
+    .contenedor-about{
+        flex-direction: column;
+    }
+    .datos-about{
+        width: 100%;
     }
  }
 @media (min-width:1023px) {
