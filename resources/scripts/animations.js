@@ -39,7 +39,21 @@ elementosDerecha.forEach((element) =>{
     observerDerecha.observe(element);
 });
 
+const elementosIzquierda= document.querySelectorAll(".ocultar-izquierda");
+const observerIzquierda = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("mostrar-derecha");
+        }
+        else{
+            entry.target.classList.remove("mostrar-derecha");
+        }
+    });
+});
 
+elementosIzquierda.forEach((element) =>{
+    observerIzquierda.observe(element);
+});
 /***************
 / Listeners
 ****************/

@@ -26,7 +26,7 @@ a{
 
 body{
     /* background-image: radial-gradient(100% 100% at 51.34% 0%, #989696 0%, #696868 15.07%, #4B4949 31.54%, #272727 58.45%, #000000 100%); */
-    background-color: #000000;
+    background: linear-gradient(to right, #243b55, #141e30);
 }
 
 .prueba{
@@ -69,10 +69,6 @@ header{
     height: 100%;
 }
 
-.nav-item:nth-child(1){
-    color: red;
-}
-
 .navbar-collapse{
     background-color: black;
 }
@@ -84,7 +80,7 @@ header{
     position: relative;
     margin: 0px 20px;
     font-size: large;
-
+    transition: all 1s ease-in-out;
 }
 
 .linkNavbar:hover{
@@ -183,7 +179,7 @@ header{
     font-size: 1.3vw;
 }
 
-#botonContacto{
+.botonContacto{
     width: 230px;
     height: 60px;
     color: #fff;
@@ -202,24 +198,25 @@ header{
     outline: none;
     white-space: nowrap;
     border: 1px solid white;
+    margin-right: 20px;
 }
-#botonContacto:hover{
+.botonContacto:hover{
     color: var(--secundario);
     border: 3px solid var(--clickable);
     background-color: var(--clickable);
     box-shadow: none; 
 }
 
-#botonContacto a{
+.botonContacto a{
     font-size: large;
     font-weight: bold;
 }
 
-#botonContacto:hover a{
+.botonContacto:hover a{
     color: white;
 }
 
-#botonContacto:after {
+.botonContacto:after {
     border-radius: 5px;
     position: absolute;
     content: "";
@@ -236,15 +233,37 @@ header{
      4px 4px 5px 0px #0001;
     transition: all 0.3s ease;
   }
-  #botonContacto:hover:after {
+  .botonContacto:hover:after {
     left: auto;
     right: 0;
     width: 100%;
   }
-  #botonContacto:active {
+  .botonContacto:active {
     top: 2px;
   }
 
+  svg{
+    height: 40px;
+  }
+  .path {
+    height: 30px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear alternate infinite;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .tagcloud--item{
+    color: white;
+  }
 /*--------------------------------------------------------------
 # Proyectos
 --------------------------------------------------------------*/
@@ -431,7 +450,8 @@ header{
 #imagen-about{
     width: 600px;
     height: auto;
-    box-shadow: 10px 10px var(--principal);;
+    box-shadow: 10px 10px var(--principal);
+    transition: all 1s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -501,6 +521,12 @@ header{
     grid-auto-columns: 100%;
 }
 
+footer{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid white;
+}
+
 /*--------------------------------------------------------------
 # Pagina respuesta
 --------------------------------------------------------------*/
@@ -519,7 +545,7 @@ header{
 --------------------------------------------------------------*/
 .ocultar{
     opacity: 0;
-    transition: all 1s;
+    transition: all 1.5s;
     filter: blur(5px);
 }
 
@@ -534,18 +560,37 @@ header{
     filter: blur(5px);
     transform: translateX(+100%);
 }
-
+.ocultar-izquierda{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
 .mostrar-derecha{
-    transition: all 1.5s;
+    transition: all 1s;
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
+.nav-item{
+    transition:all 1s ease;
+}
+.nav-item:nth-child(1) {
+    transition-delay: 1s;
+}
+.nav-item:nth-child(2) {
+    transition-delay: 0.6s;
+}
+.nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
 @media(prefers-reduced-motion){
     .hidden{
         transition: none;
     }
 }
+
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
@@ -580,3 +625,9 @@ header{
 @media (min-width:1281px) {
 
 }
+
+
+/*--------------------------------------------------------------
+# Pruebas
+--------------------------------------------------------------*/
+
