@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media (max-width:481px)  { 
+    #navbarPrincipal{
+        padding-right: 0;
+    }
+    .contenedor-hero{
+        border-top: none;
+    }
+    #imagen-about{
+        width: 80%;
+    }
+    .hero-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 50vh;
+    }
+    .hero-container h3{
+        font-size: 1.5rem;
+    }
+    .hero-container h1{
+        font-size: 2.5rem;
+    }
+    .hero-container p{
+        font-size: 1rem;
+    }
+    .botonContacto{
+        width: 160px;
+        margin: 0;
+    }
+    .contenedor-botones{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .botonContacto a{
+        font-size: medium;
+    }
+    .Sphere{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tagcloud{
+        width: 80% !important;
+        margin: 0 !important;
+    }
+
+    /* Proyectos */
+    .datos-proyecto h1{
+        font-size: 2em;
+    }
+    .contenedor-caracteristicas p{
+        font-size: medium;
+    }
+
+    .leyenda{
+        padding-bottom: 40px;
+    }
+    .datos-about{
+        margin-top: 20px;
+    }
+    .datos-about h3{
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .datos-about p{
+        line-height: 20px;
+    }
+    #imagen-about{
+        width: 80%;
+    }
+    .contenedor-about{
+        width: 100%;
+    }
+    .contenedor-contacto{
+        margin-top: 0;
+    }
+    .icono-redes{
+        font-size: 2em;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .contenedor-datos{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (min-width:641px)  { 
+
+
+}
+@media (max-width:961px)  { 
+    .contenedor-datos-proyecto{
+        padding-bottom: 10vh;
+    }
+    .contenedor-about{
+        flex-direction: column;
+    }
+    .datos-about{
+        width: 100%;
+    }
+ }
+@media (min-width:1023px) {
+
+
+ }
+@media (min-width:1281px) {
+
+}

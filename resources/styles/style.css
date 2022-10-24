@@ -11,6 +11,10 @@
     outline: none;
 }
 
+section{
+    overflow: hidden;
+}
+
 :root{
     --principal: #00ADB5;
     --secundario:#EEEEEE;
@@ -48,17 +52,23 @@ body{
 header{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 200;
 }
 
 .navbar{
+    width: 100%;
      display: flex;
      position: relative;
      justify-content: space-between;
      background-color: #000000;
      border-bottom: 1px solid var(--secundario);
      height: 70px;
+}
+
+#navbarPrincipal{
+    justify-content: end;
+    padding-right: 100px;
 }
 
 .show{
@@ -148,10 +158,8 @@ header{
 #hero{
     height: 100vh;
     width: 100vw;
-    margin-top: 70px;
+    margin-top: 100px;
     z-index: -10;
-    overflow: hidden;
-    
 }
 .contenedor-hero{
     width: fit-content;
@@ -167,7 +175,7 @@ header{
 }
 .hero-container h3{
     color: var(--clickable);
-    font-size: 3vw;
+    font-size: 1.5rem;
 }
 .hero-container h1{
     color: var(--secundario);
@@ -278,7 +286,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .contenedor-datos-proyecto{
@@ -584,6 +591,9 @@ footer{
 .nav-item:nth-child(3) {
     transition-delay: 0.3s;
 }
+.nav-item:nth-child(4) {
+    transition-delay: 0s;
+}
 
 @media(prefers-reduced-motion){
     .hidden{
@@ -591,40 +601,7 @@ footer{
     }
 }
 
-/*--------------------------------------------------------------
-# Media Queries
---------------------------------------------------------------*/
 
-@media (max-width:426px)  {
-
-
- }
-@media (min-width:481px)  { 
-
-
-}
-@media (min-width:641px)  { 
-
-
-}
-@media (max-width:961px)  { 
-    .contenedor-datos-proyecto{
-        padding-bottom: 10vh;
-    }
-    .contenedor-about{
-        flex-direction: column;
-    }
-    .datos-about{
-        width: 100%;
-    }
- }
-@media (min-width:1023px) {
-
-
- }
-@media (min-width:1281px) {
-
-}
 
 
 /*--------------------------------------------------------------

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="vendor/bootsrap/bootstrap.min.css">
   <link rel="stylesheet" href="resources/styles/style.css">
   <link rel="stylesheet" href="vendor/bootsrap/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="resources/styles/responsive.css">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
           <i class="botonNavbar fa fa-bars" id="botonNavbar" aria-hidden="true"></i>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarPrincipal">
+        <div class="collapse navbar-collapse" id="navbarPrincipal">
           <ul class="navbar-nav">
             <li class="nav-item mb-1  ocultar-derecha ">
               <a class="linkNavbar" href="#proyectos">
@@ -74,7 +74,7 @@
                 <p class="numeroNav">3.</p> About me
               </a>
             </li>
-            <li class="nav-item mb-1 ocultar-derecha" >
+            <li class="nav-item mb-1 ms-2 ocultar-derecha" >
               <a class="linkNavbar " href="#contacto" >
                 <p class="numeroNav">4.</p>Contact
               </a>
@@ -85,17 +85,19 @@
   </header>
 
   <section id="hero" class="d-flex justify-content-center align-items-center ">
-    <div class="row contenedor-hero" data-aos="fade-up"  data-aos-duration="2000">
+    <div class="row contenedor-hero">
       <div class="col-lg-8 d-grid align-items-center">
-        <div class="hero-container ">
+        <div class="hero-container">
           <h3 class="ocultar">Hi, my name is</h3>
           <h1 class="ocultar">Adrian Rocafull</h1>
           <p class="ocultar">I am a software engineer specialized in web development and portfolio's building. <br> Currently I'm
             focused on
             making more accesible to everyone having a tailor-made web.</p>
 
-          <button class="botonContacto"><a href="#contacto" class="d-inline-block">Contact me</a></button>
-          <button class="botonContacto"><a href="resources/Curriculum.pdf" download="CV_Adrian_Rocafull" class="d-inline-block">Download CV</a></button>
+          <div class="contenedor-botones">
+            <button class="botonContacto"><a href="#contacto" class="d-inline-block">Contact me</a></button>
+            <button class="botonContacto"><a href="resources/Curriculum.pdf" download="CV_Adrian_Rocafull" class="d-inline-block">Download CV</a></button>
+          </div>
         </div>
       </div>
       <div class="col-lg-4 d-flex justify-content-center align-items-center">
@@ -264,28 +266,24 @@
     </div>
       <div class="contenedor-about">
         <div class="datos-about ocultar-izquierda">
-          <ul>
             <h3>SKILLS</h3>
-            <br>
-            <br>
-            <li>HTML5 / CSS3</li>
-            <li>REACT</li>
-            <li>GIT</li>
-            <li>SASS</li>
-            <li>JAVASCRIPT</li>
-            <li>JAVA</li>
-            <li>BOOTSTRAP</li>
-            <li>C#</li>
-            <li>AGILE METHODOLOGIES</li>
-          </ul>
+            <p>HTML5 / CSS3</p>
+            <p>REACT</p>
+            <p>GIT</p>
+            <p>SASS</p>
+            <p>JAVASCRIPT</p>
+            <p>JAVA</p>
+            <p>BOOTSTRAP</p>
+            <p>C#</p>
+            <p>AGILE METHODOLOGIES</p>
         </div>
         <img src="resources/imagenes/about.jpg" alt="imagen-about" id="imagen-about" class="ocultar-derecha">
       </div>
   </section>
 
   <section id="contacto">
-      <div class="section-title text-center mb-5 pb-5 titulos">
-        <h1>CONTACTO</h1>
+      <div class="section-title text-center titulos">
+        <h1>CONTACT</h1>
         <hr class="bg-info">
       </div>
 
@@ -324,9 +322,10 @@
         <div class="col-lg-7 mt-5 mt-lg-0 informacion">
           <form action="https://formsubmit.co/084271fe296ee33b3db9da13c3fe0af7" method="POST">
           <input type="text" name="_honey" style="display:none">          
-            <input type="hidden" name="_autoresponse" value="Muchas gracias por contar conmigo. ¡Enseguida me pondre en contacto contigo!">
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/respuesta.html">
-
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Name</label>
@@ -388,11 +387,6 @@
   <script src="resources/scripts/animations.js"></script>
   <script src="vendor/bootsrap/bootstrap.min.js"></script>
   <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script>
-    AOS.init();
-  </script>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
     <script>
         const Texts = [
@@ -409,7 +403,6 @@
             initSpeed: 'fast',
             direction: 135,
             keep: true
-
         });
 
         // Giving color to each text in sphere
