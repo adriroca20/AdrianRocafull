@@ -133,8 +133,12 @@ header{
 }
 
 .botonNavbar{
+    margin-right: 10px;
     color: var(--secundario);   
     transition: all 0.3s ease-in-out;
+}
+#botonNavbar{
+    margin: 0;
 }
 .botonNavbar:hover{
     transform: rotate(90deg);
@@ -446,8 +450,10 @@ header{
     height: 100%;
     text-align: center;
     color: white;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .datos-about li{

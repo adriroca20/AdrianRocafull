@@ -3,6 +3,9 @@
 --------------------------------------------------------------*/
 
 @media (max-width:481px)  { 
+    .botonNavbar {
+        margin-right: 10px;
+    }
     #navbarPrincipal{
         padding-right: 0;
     }
@@ -64,6 +67,11 @@
     .leyenda{
         padding-bottom: 40px;
     }
+
+    /* About */
+    #about-me{
+        height: auto;
+    }
     .datos-about{
         margin-top: 20px;
     }
@@ -76,9 +84,12 @@
     }
     #imagen-about{
         width: 80%;
+        object-fit: fill;
+        object-position: center;
     }
     .contenedor-about{
         width: 100%;
+        height: fit-content;
     }
     .contenedor-contacto{
         margin-top: 0;
@@ -92,6 +103,9 @@
         flex-direction: column;
         justify-content: center;
     }
+    .datos-about{
+        height: fit-content;
+    }
 }
 @media (min-width:641px)  { 
 
@@ -103,6 +117,9 @@
     }
     .contenedor-about{
         flex-direction: column;
+    }
+    #about-me{
+        height: auto;
     }
     .datos-about{
         width: 100%;
